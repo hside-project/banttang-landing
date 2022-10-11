@@ -43,6 +43,14 @@ const GlobalStyle = createGlobalStyle`
     text-decoration: none;
     background: none;
   }
+
+  a {
+  text-decoration: none;
+  a:link { color: Navy; } 
+  a:visited { color: DeepSkyBlue; }
+  a:hover { color: Navy; } 
+  a:active { color: Navy ;}
+  }
 `;
 
 export default GlobalStyle;

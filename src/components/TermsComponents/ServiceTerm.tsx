@@ -3,9 +3,6 @@ import styled from 'styled-components';
 // data
 import serviceJson from '../../data/terms/serviceTerms.json';
 
-// components
-import Navigation from './Navigation';
-
 export default function ServiceTermsPage() {
     const renderHeaderTerm = () => {
         // 약관 헤더
@@ -94,12 +91,20 @@ const LayoutInner = styled.div`
     width: 100%;
     height: 100%;
     padding: 5em 0;
+    @media screen and (max-width: 800px) {
+        padding: 2em 0;
+    }
 `;
 
 const TermsBox = styled.section`
     display: flex;
     width: 100%;
     padding: 3em 10em;
+
+    @media screen and (max-width: 800px) {
+        padding: 1em;
+        flex-direction: column;
+    }
 `;
 
 const TermTitle = styled.div`
@@ -107,22 +112,33 @@ const TermTitle = styled.div`
     flex-direction: column;
     flex: 1;
     margin-right: 1em;
-    justify-content: center;
     align-items: center;
+    @media screen and (max-width: 800px) {
+        flex-direction: row;
+    }
 `;
 
 const TermContent = styled.div`
     display: flex;
     height: auto;
     flex-direction: column;
-    flex: 3;
+    flex: 5;
 `;
 
 const TermTitleText = styled.h1`
     word-wrap: break-word;
     padding: 1em 0;
+    @media screen and (max-width: 800px) {
+        line-height: 1.2em;
+        padding: 0.5em 0;
+        font-size: 1em;
+    }
 `;
 const TermContetnText = styled.span`
     line-height: 1.5em;
     margin: 1em 0;
+    @media screen and (max-width: 800px) {
+        margin: 0.5em 0;
+        font-size: 0.8em;
+    }
 `;

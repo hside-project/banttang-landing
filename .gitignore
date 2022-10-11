@@ -6,3 +6,6 @@
 
 # misc
 yarn-error.log
+
+# dist
+dist/

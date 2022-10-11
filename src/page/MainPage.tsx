@@ -1,13 +1,13 @@
 import styled from 'styled-components';
 import { Link } from 'react-router-dom';
 
+// components
+
 export default function MainPage() {
     return (
         <Layout>
             <LayoutInner>
-                <Text>MainPage</Text>
-                <Button to="/login">Go to Login</Button>
-                <Button to="/terms">약관</Button>
+                <Text>랜딩페이지</Text>
             </LayoutInner>
         </Layout>
     );
@@ -36,4 +36,7 @@ const Button = styled(Link)`
     margin: 0.3em;
 `;
 
-const Text = styled.span``;
+const Text = styled.span`
+    font-size: 2em;
+    font-weight: 700;
+`;

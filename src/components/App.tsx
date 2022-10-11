@@ -1,23 +1,33 @@
 import { theme } from '../styles/theme';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter } from 'react-router-dom';
-import styled from 'styled-components';
-
-// routers
-import MainRouter from '../router/MainRouter';
-import TermsRouter from '../router/TermsRouter';
+import { BrowserRouter, Route, Routes } from 'react-router-dom';
 
 // styled
+import styled from 'styled-components';
 import GlobalStyle from '../styles/GlobalStyle';
+
+// pages
+import TermsPage from '@/page/TermsPage';
+import MainPage from '@/page/MainPage';
+import ContactPage from '@/page/ContactPage';
+
+// components
+import Header from './Common/Header';
 
 const App = () => {
     return (
         <ThemeProvider theme={theme}>
             <GlobalStyle />
             <Layout>
+                {/* {headerDivider()} */}
                 <BrowserRouter>
-                    <MainRouter />
-                    <TermsRouter />
+                    <Header>
+                        <Routes>
+                            <Route path="/" element={<MainPage />} />
+                            <Route path="/contact" element={<ContactPage />} />
+                            <Route path="/terms/*" element={<TermsPage />} />
+                        </Routes>
+                    </Header>
                 </BrowserRouter>
             </Layout>
         </ThemeProvider>
