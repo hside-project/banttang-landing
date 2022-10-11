@@ -23,7 +23,9 @@ export default function ContactPage() {
 
     return (
         <Layout>
-            <LayoutInner></LayoutInner>
+            <LayoutInner>
+                <Text>Contact</Text>
+            </LayoutInner>
         </Layout>
     );
 }
@@ -39,4 +41,9 @@ const Layout = styled.div`
 
 const LayoutInner = styled.div`
     display: flex;
+`;
+
+const Text = styled.span`
+    font-size: 2em;
+    font-weight: 700;
 `;

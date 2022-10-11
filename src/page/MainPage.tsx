@@ -15,19 +15,15 @@ export default function MainPage() {
 
 const Layout = styled.div`
     display: flex;
-    flex: 1;
+    width: 100%;
+    height: 100vh;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 `;
 
 const LayoutInner = styled.div`
     display: flex;
-    width: 28em;
-    height: auto;
-    padding: 4em;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
 `;
 
 const Button = styled(Link)`

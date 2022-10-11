@@ -1,9 +1,11 @@
-import { ReactNode } from 'react';
+import { ReactNode, useEffect, useState } from 'react';
 import styled from 'styled-components';
-import { NavLink, useNavigate } from 'react-router-dom';
+import { NavLink, useLocation, useNavigate } from 'react-router-dom';
 
 export default function TermNavigation({ children }: { children: ReactNode }) {
     const navigation = useNavigate();
+    const [locataion, setLocataion] = useState('');
+    const locatate = useLocation();
 
     const tabs = [
         { title: 'Home', path: '/', navigate: () => navigation('/') },
@@ -24,11 +26,18 @@ export default function TermNavigation({ children }: { children: ReactNode }) {
     const renderNavigationTab = () => {
         const result = tabs.map(({ title, path }, index) => (
             <Button to={path} key={index}>
-                <Text>{title}</Text>
+                <Text isFoucs={locataion === path}>{title}</Text>
             </Button>
         ));
         return result;
     };
+
+    useEffect(() => {
+        if (!locatate?.pathname) return;
+
+        setLocataion(locatate.pathname);
+    }, [locatate]);
+
     return (
         <>
             <Layout>
@@ -89,11 +98,13 @@ const Button = styled(NavLink)`
     }
 `;
 
-const Text = styled.span`
+const Text = styled.span<{ isFoucs: boolean }>`
     font-size: 1em;
     font-weight: 500;
     color: white;
     white-space: nowrap;
+    font-weight: ${({ isFoucs }) => (isFoucs ? 700 : 500)};
+    color: ${({ isFoucs }) => (isFoucs ? 'black' : '#fff')};
     @media screen and (max-width: 800px) {
         font-size: 0.8em;
     }

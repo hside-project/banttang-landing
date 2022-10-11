@@ -11,14 +11,14 @@ export default function MainNavigation({ children }: { children: ReactNode }) {
     const tabArray = [
         { title: '서비스 소개', navigate: () => navigation('/'), path: '/' },
         {
-            title: '약관 소개',
-            navigate: () => navigation('/terms/service'),
-            path: '/terms/service',
-        },
-        {
             title: 'contact',
             navigate: () => navigation('/contact'),
             path: '/contact',
+        },
+        {
+            title: '약관 소개',
+            navigate: () => navigation('/terms/service'),
+            path: '/terms/service',
         },
     ];
 
@@ -51,7 +51,7 @@ const Layout = styled.header`
     position: fixed;
     top: 0;
     width: 100%;
-    height: 2.5em;
+    height: 3em;
     overflow: hidden;
 `;
 
@@ -68,6 +68,6 @@ const Tab = styled.button<{ isFoucs: boolean }>`
     justify-content: center;
     align-items: center;
     padding: 0.5em 1em;
-    font-weight: ${({ isFoucs }) => (isFoucs ? 500 : 300)};
-    color: ${({ isFoucs }) => (isFoucs ? 'red' : '#555')};
+    font-weight: ${({ isFoucs }) => (isFoucs ? 700 : 500)};
+    color: ${({ isFoucs }) => (isFoucs ? 'white' : '#333')};
 `;
