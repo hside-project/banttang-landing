@@ -1,6 +1,6 @@
 import { theme } from '../styles/theme';
 import { ThemeProvider } from 'styled-components';
-import { BrowserRouter, Route, Routes } from 'react-router-dom';
+import { BrowserRouter, HashRouter, Route, Routes } from 'react-router-dom';
 
 // styled
 import styled from 'styled-components';
@@ -20,15 +20,16 @@ const App = () => {
             <GlobalStyle />
             <Layout>
                 {/* {headerDivider()} */}
-                <BrowserRouter>
+                <HashRouter>
                     <Header>
                         <Routes>
                             <Route path="/" element={<MainPage />} />
                             <Route path="/contact" element={<ContactPage />} />
                             <Route path="/terms/*" element={<TermsPage />} />
+                            <Route path="/app/*" element={<TermsPage />} />
                         </Routes>
                     </Header>
-                </BrowserRouter>
+                </HashRouter>
             </Layout>
         </ThemeProvider>
     );

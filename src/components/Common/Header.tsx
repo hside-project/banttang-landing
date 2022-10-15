@@ -5,7 +5,7 @@ import TermNavigation from '../TermsComponents/TermNavigation';
 
 export default function Header({ children }: { children: ReactNode }) {
     const locatate = useLocation();
-
+    console.log('locatate', locatate);
     if (['/', '/contact'].includes(locatate.pathname)) {
         return <MainNavigation>{children}</MainNavigation>;
     }
@@ -18,5 +18,8 @@ export default function Header({ children }: { children: ReactNode }) {
         return <TermNavigation>{children}</TermNavigation>;
     }
 
+    if (['/app'].includes(locatate.pathname)) {
+        return <>{children}</>;
+    }
     return <>{children}</>;
 }
