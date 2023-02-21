@@ -1,5 +1,9 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
+import landingimg1 from 'src/imgs/landing-img1.png';
+import landingimg2 from 'src/imgs/landing-img2.png';
+import landingimg3 from 'src/imgs/landing-img3.png';
+import banttang_qrcode from 'banttang_qrcode.png';
 
 // components
 
@@ -9,7 +13,7 @@ export default function MainPage() {
     return (
         <Layout>
             <LayoutInner>
-                <Page height={dom} color = {"bisque"}>
+                <Page height={dom} color={"bisque"}>
                     <IntroductionArea>
                         <WrapperBox>
                             <TitleText>
@@ -23,7 +27,7 @@ export default function MainPage() {
                         </WrapperBox>
                     </IntroductionArea>
                     <ImageArea>
-                        <LandingImage src="imgs/landing-img1.png" />
+                        <LandingImage src={landingimg1}/>
                     </ImageArea>
                 </Page>
                 <Page height={dom} color={"white"}>
@@ -39,10 +43,10 @@ export default function MainPage() {
                         </WrapperBox>
                     </IntroductionArea>
                     <ImageArea>
-                        <LandingDoubleImage src="imgs/landing-img2.png" />
+                        <LandingDoubleImage src={landingimg2}/>
                     </ImageArea>
                 </Page>
-                <Page height={dom} color = {"bisque"}>
+                <Page height={dom} color={"bisque"}>
                     <IntroductionArea>
                         <WrapperBox>
                             <TitleText>
@@ -54,7 +58,7 @@ export default function MainPage() {
                         </WrapperBox>
                     </IntroductionArea>
                     <ImageArea>
-                        <LandingImage src="imgs/landing-img3.png" />
+                        <LandingImage src={landingimg3}/>
                     </ImageArea>
                 </Page>
                 <Page height={dom} color={"white"}>
@@ -70,7 +74,7 @@ export default function MainPage() {
                         </WrapperBox>
                     </IntroductionArea>
                     <ImageArea>
-                        <QrImage src="imgs/banttang_qrcode.png"  />
+                        <QrImage src={banttang_qrcode}/>
                     </ImageArea>
                 </Page>
 
@@ -105,7 +109,7 @@ const Text = styled.span`
   font-weight: 700;
 `;
 
-const Page = styled.div <{ height: number , color: String}>`
+const Page = styled.div <{ height: number, color: String }>`
   display: flex;
   background-color: ${(props) => props.color};
   width: 100vw;
@@ -151,20 +155,20 @@ const SubText = styled.span`
 const LandingImage = styled.img`
   display: flex;
   width: 400px;
-  margin : auto;
+  margin: auto;
   object-fit: contain;
 `
 
 const LandingDoubleImage = styled.img`
   display: flex;
   width: 700px;
-  margin : auto;
+  margin: auto;
   object-fit: contain;
 `
 
 const QrImage = styled.img`
   display: flex;
   width: 300px;
-  margin : auto;
+  margin: auto;
   object-fit: contain;
 `
