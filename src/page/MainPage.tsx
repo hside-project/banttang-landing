@@ -1,13 +1,16 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-import landingimg1 from 'src/imgs/landing-img1.png';
-import landingimg2 from 'src/imgs/landing-img2.png';
-import landingimg3 from 'src/imgs/landing-img3.png';
-import banttang_qrcode from 'banttang_qrcode.png';
+// import landingimg1 from '../imgs/landing-img1.png';
+// import landingimg2 from '../imgs/landing-img2.png';
+// import landingimg3 from '../imgs/landing-img3.png';
+// import banttang_qrcode from '../imgs/banttang_qrcode.png';
 
-// components
 
 export default function MainPage() {
+    const landingimg1 = 'https://user-images.githubusercontent.com/120109736/220337106-59b11312-276d-43bf-9197-8d78f9b34575.png'
+    const landingimg2 = 'https://user-images.githubusercontent.com/120109736/220337116-5df63e10-0efb-4b65-95e4-e4e40f469728.png'
+    const landingimg3 = 'https://user-images.githubusercontent.com/120109736/220337125-ef460486-4692-4fa3-a423-b7c76d87269f.png'
+    const banttang_qrcode = 'https://user-images.githubusercontent.com/120109736/220337135-ffc7bbe6-e266-41e7-aa7f-7f5cb6a5640c.png'
     const dom = window.innerHeight;
 
     return (
@@ -17,7 +20,7 @@ export default function MainPage() {
                     <IntroductionArea>
                         <WrapperBox>
                             <TitleText>
-                                함께 사요 반땅!
+                                함께 사요 반땅땅!
                             </TitleText>
                             <SubText>
                                 딱 하나만 필요할때! <br/>
