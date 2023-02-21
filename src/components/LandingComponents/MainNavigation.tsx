@@ -10,11 +10,7 @@ export default function MainNavigation({ children }: { children: ReactNode }) {
 
     const tabArray = [
         { title: '서비스 소개', navigate: () => navigation('/'), path: '/' },
-        {
-            title: 'contact',
-            navigate: () => navigation('/contact'),
-            path: '/contact',
-        },
+
         {
             title: '약관 소개',
             navigate: () => navigation('/terms/service'),
