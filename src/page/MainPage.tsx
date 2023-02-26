@@ -1,10 +1,5 @@
 import styled from "styled-components";
 import {Link} from "react-router-dom";
-// import landingimg1 from '../imgs/landing-img1.png';
-// import landingimg2 from '../imgs/landing-img2.png';
-// import landingimg3 from '../imgs/landing-img3.png';
-// import banttang_qrcode from '../imgs/banttang_qrcode.png';
-
 
 export default function MainPage() {
     const landingimg1 = 'https://user-images.githubusercontent.com/120109736/220337106-59b11312-276d-43bf-9197-8d78f9b34575.png'
@@ -157,21 +152,21 @@ const SubText = styled.span`
 
 const LandingImage = styled.img`
   display: flex;
-  width: 400px;
+  width: 50%;
   margin: auto;
   object-fit: contain;
 `
 
 const LandingDoubleImage = styled.img`
   display: flex;
-  width: 700px;
+  width: 80%;
   margin: auto;
   object-fit: contain;
 `
 
 const QrImage = styled.img`
   display: flex;
-  width: 300px;
+  width: 50%;
   margin: auto;
   object-fit: contain;
 `
