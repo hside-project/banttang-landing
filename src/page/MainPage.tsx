@@ -15,7 +15,7 @@ export default function MainPage() {
                     <IntroductionArea>
                         <WrapperBox>
                             <TitleText>
-                                함께 사요 반땅땅!
+                                함께 사요 반땅!
                             </TitleText>
                             <SubText>
                                 딱 하나만 필요할때! <br/>
